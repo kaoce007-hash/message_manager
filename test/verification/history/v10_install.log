@@ -1,0 +1,15 @@
+-- Install configuration: "Release"
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/lib/libbinary_message.a
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include/MessageCommon.hpp
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include/DumpTable.hpp
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include/BinaryMessage.hpp
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include/MessageLink.hpp
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include/MessageManager.hpp
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include/EnumDefinitions.hpp
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include/MessageInterface.hpp
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include/nlohmann
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/include/nlohmann/json.hpp
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/share/licenses/binary_message/LICENSE.nlohmann-json.MIT
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/lib/cmake/BinaryMessage/BinaryMessageTargets.cmake
+-- Installing: /workspace/scratch/d486e8ce2a69/install_v10/lib/cmake/BinaryMessage/BinaryMessageTargets-release.cmake

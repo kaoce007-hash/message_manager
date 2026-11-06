@@ -1,0 +1,103 @@
+UpdateCTestConfiguration  from :/tmp/binary_audit_release/DartConfiguration.tcl
+Test project /tmp/binary_audit_release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: legacy_binary_tests
+
+1: Test command: /tmp/binary_audit_release/legacy_tests
+1: Working Directory: /tmp/binary_audit_release
+1: Test timeout computed to be: 10000000
+1: [Message::set] link= message= field=id error=unsigned integer overflow
+1: [Message::set] link= message= field=id error=expected nonnegative integer
+1: [Message::set] link= message= field=id error=expected nonnegative integer
+1: [Message::set] link= message= field=id error=expected nonnegative integer
+1: [Message::set] link= message= field=invalid error=unknown field: invalid
+1: [Message::set] link= message= field=name error=string exceeds fixed byte length or contains NUL
+1: [Message::set] link= message= field=name error=string exceeds fixed byte length or contains NUL
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=non-finite number
+1: [Message::set] link= message= field=x error=non-finite number
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=signed integer overflow
+1: [Message::set] link= message= field=x error=non-finite number
+1: [Message::set] link= message= field=x error=non-finite number
+1: [Message::set] link= message= field=a.inner.x error=signed integer overflow
+1: [Message::set] link= message= field=a.inner error=struct fields mismatch: a.inner
+1: All tests passed
+1/8 Test #1: legacy_binary_tests ..............   Passed    0.00 sec
+test 2
+    Start 2: message_tests
+
+2: Test command: /tmp/binary_audit_release/tests "testdata/json"
+2: Working Directory: /tmp/binary_audit_release
+2: Test timeout computed to be: 10000000
+2: Passed 220 checks
+2/8 Test #2: message_tests ....................   Passed    0.01 sec
+test 3
+    Start 3: alignment_tests
+
+3: Test command: /tmp/binary_audit_release/alignment_tests "testdata/json"
+3: Working Directory: /tmp/binary_audit_release
+3: Test timeout computed to be: 10000000
+3: Passed 137 alignment checks
+3/8 Test #3: alignment_tests ..................   Passed    0.00 sec
+test 4
+    Start 4: msgcode_tests
+
+4: Test command: /tmp/binary_audit_release/msgcode_tests "testdata/v5/json"
+4: Working Directory: /tmp/binary_audit_release
+4: Test timeout computed to be: 10000000
+4: Passed 58 msgcode checks
+4/8 Test #4: msgcode_tests ....................   Passed    0.01 sec
+test 5
+    Start 5: interface_v6_tests
+
+5: Test command: /tmp/binary_audit_release/interface_v6_tests "testdata/v6/json"
+5: Working Directory: /tmp/binary_audit_release
+5: Test timeout computed to be: 10000000
+5: Passed 56 v6 checks
+5/8 Test #5: interface_v6_tests ...............   Passed    0.01 sec
+test 6
+    Start 6: interface_v7_tests
+
+6: Test command: /tmp/binary_audit_release/interface_v7_tests "json"
+6: Working Directory: /tmp/binary_audit_release
+6: Test timeout computed to be: 10000000
+6: Passed 47 v7 checks
+6/8 Test #6: interface_v7_tests ...............   Passed    0.01 sec
+test 7
+    Start 7: audit_integration_tests
+
+7: Test command: /tmp/binary_audit_release/audit_integration_tests "json"
+7: Working Directory: /tmp/binary_audit_release
+7: Test timeout computed to be: 60
+7: UDP cases: 190, datagrams: 380
+7: Mutations: 677 accepted, 347 rejected
+7: Passed 2759 audit integration checks
+7/8 Test #7: audit_integration_tests ..........   Passed    0.38 sec
+test 8
+    Start 8: audit_wire_oracle
+
+8: Test command: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12 "-I" "/workspace/scratch/be66273e6248/audit_work/binary_message/audit_wire_oracle.py" "/tmp/binary_audit_release/audit_output/oracle_cases.json"
+8: Working Directory: /tmp/binary_audit_release
+8: Test timeout computed to be: 10000000
+8: Python struct oracle: 190 cases / 380 frames matched byte-for-byte
+8/8 Test #8: audit_wire_oracle ................   Passed    0.03 sec
+
+100% tests passed out of 8
+
+Total Test time (real) =   0.45 sec

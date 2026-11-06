@@ -1,0 +1,138 @@
+{
+    "interfaces": [
+        {
+            "name": "link1_to_link2_message1",
+            "source": {
+                "message": "message1",
+                "link": "link_message1"
+            },
+            "target": {
+                "message": "message1",
+                "link": "link_message2"
+            },
+            "fields": [
+                {
+                    "from": "header.id",
+                    "to": "packet.sequence"
+                },
+                {
+                    "from": "header.version",
+                    "to": "packet.revision"
+                },
+                {
+                    "from": "body.position.x",
+                    "to": "payload.coordinates.east"
+                },
+                {
+                    "from": "body.position.y",
+                    "to": "payload.coordinates.north"
+                },
+                {
+                    "from": "body.temperature",
+                    "to": "payload.celsius"
+                },
+                {
+                    "from": "body.name",
+                    "to": "payload.label"
+                },
+                {
+                    "from": "header.state",
+                    "to": "packet.state"
+                },
+                {
+                    "from": "body.samples",
+                    "to": "payload.measurements"
+                },
+                {
+                    "from": "body.points[0].x",
+                    "to": "payload.tracks[0].east"
+                },
+                {
+                    "from": "body.points[0].y",
+                    "to": "payload.tracks[0].north"
+                },
+                {
+                    "from": "body.points[1].x",
+                    "to": "payload.tracks[1].east"
+                },
+                {
+                    "from": "body.points[1].y",
+                    "to": "payload.tracks[1].north"
+                },
+                {
+                    "from": "body.payload",
+                    "to": "payload.data"
+                }
+            ],
+            "constants": {
+                "packet.code": 2001
+            }
+        },
+        {
+            "name": "link2_to_link1_message1",
+            "source": {
+                "message": "message1",
+                "link": "link_message2"
+            },
+            "target": {
+                "message": "message1",
+                "link": "link_message1"
+            },
+            "fields": [
+                {
+                    "from": "packet.sequence",
+                    "to": "header.id"
+                },
+                {
+                    "from": "packet.revision",
+                    "to": "header.version"
+                },
+                {
+                    "from": "payload.coordinates.east",
+                    "to": "body.position.x"
+                },
+                {
+                    "from": "payload.coordinates.north",
+                    "to": "body.position.y"
+                },
+                {
+                    "from": "payload.celsius",
+                    "to": "body.temperature"
+                },
+                {
+                    "from": "payload.label",
+                    "to": "body.name"
+                },
+                {
+                    "from": "packet.state",
+                    "to": "header.state"
+                },
+                {
+                    "from": "payload.measurements",
+                    "to": "body.samples"
+                },
+                {
+                    "from": "payload.tracks[0].east",
+                    "to": "body.points[0].x"
+                },
+                {
+                    "from": "payload.tracks[0].north",
+                    "to": "body.points[0].y"
+                },
+                {
+                    "from": "payload.tracks[1].east",
+                    "to": "body.points[1].x"
+                },
+                {
+                    "from": "payload.tracks[1].north",
+                    "to": "body.points[1].y"
+                },
+                {
+                    "from": "payload.data",
+                    "to": "body.payload"
+                }
+            ],
+            "constants": {}
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+cd build/test/output && ../legacy_tests
+[Message::set] link= message= field=id error=unsigned integer overflow
+[Message::set] link= message= field=id error=expected nonnegative integer
+[Message::set] link= message= field=id error=expected nonnegative integer
+[Message::set] link= message= field=id error=expected nonnegative integer
+[Message::set] link= message= field=invalid error=unknown field: invalid
+[Message::set] link= message= field=name error=string exceeds fixed byte length or contains NUL
+[Message::set] link= message= field=name error=string exceeds fixed byte length or contains NUL
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=non-finite number
+[Message::set] link= message= field=x error=non-finite number
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=non-finite number
+[Message::set] link= message= field=x error=non-finite number
+[Message::set] link= message= field=a.inner.x error=signed integer overflow
+[Message::set] link= message= field=a.inner error=struct fields mismatch: a.inner
+All tests passed
+cd build/test/output && ../tests ../../../test/data/json
+Passed 220 checks
+cd build/test/output && ../alignment_tests ../../../test/data/json
+Passed 137 alignment checks
+cd build/test/output && ../msgcode_tests ../../../test/data/v5/json
+Passed 58 msgcode checks
+cd build/test/output && ../interface_v6_tests ../../../test/data/v6/json
+Passed 56 v6 checks
+cd build/test/output && ../interface_v7_tests ../../../test/data/current/json
+Passed 47 v7 checks
+cd build/test/output && ../field_mapping_tests ../../../json
+Passed 34 inline mapping checks
+cd build/test/output && ../audit_integration_tests ../../../test/data/current/json
+UDP cases: 190, datagrams: 380
+Mutations: 677 accepted, 347 rejected
+Passed 2759 audit integration checks
+python3 -I test/audit_wire_oracle.py build/test/output/audit_output/oracle_cases.json
+Python struct oracle: 190 cases / 380 frames matched byte-for-byte

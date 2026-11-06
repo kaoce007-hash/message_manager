@@ -1,0 +1,76 @@
+make: Entering directory '/workspace/scratch/0dcd2b8dc64a/source/unpacked/binary_message'
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -c src/BinaryMessage.cpp -o build/obj/BinaryMessage.o
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -c src/MessageInterface.cpp -o build/obj/MessageInterface.o
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -c src/MessageManager.cpp -o build/obj/MessageManager.o
+rm -f lib/libbinary_message.a
+ar rcs lib/libbinary_message.a build/obj/BinaryMessage.o build/obj/DumpTable.o build/obj/EnumDefinitions.o build/obj/MessageCommon.o build/obj/MessageInterface.o build/obj/MessageManager.o
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/direct_alignment_tests.d test/direct_alignment_tests.cpp lib/libbinary_message.a   -o build/test/direct_alignment_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/legacy_tests.d test/legacy_tests.cpp lib/libbinary_message.a   -o build/test/legacy_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/tests.d test/tests.cpp lib/libbinary_message.a   -o build/test/tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/alignment_tests.d test/alignment_tests.cpp lib/libbinary_message.a   -o build/test/alignment_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/msgcode_tests.d test/msgcode_tests.cpp lib/libbinary_message.a   -o build/test/msgcode_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/interface_v6_tests.d test/interface_v6_tests.cpp lib/libbinary_message.a   -o build/test/interface_v6_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/interface_v7_tests.d test/interface_v7_tests.cpp lib/libbinary_message.a   -o build/test/interface_v7_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/field_mapping_tests.d test/field_mapping_tests.cpp lib/libbinary_message.a   -o build/test/field_mapping_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/bitfield_tests.d test/bitfield_tests.cpp lib/libbinary_message.a   -o build/test/bitfield_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/integer_format_tests.d test/integer_format_tests.cpp lib/libbinary_message.a   -o build/test/integer_format_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/simple_structure_tests.d test/simple_structure_tests.cpp lib/libbinary_message.a   -o build/test/simple_structure_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/audit_integration_tests.d test/audit_integration_tests.cpp lib/libbinary_message.a   -o build/test/audit_integration_tests
+cd build/test/output && ../legacy_tests
+[Message::set] link= message= field=id error=unsigned integer overflow
+[Message::set] link= message= field=id error=expected nonnegative integer
+[Message::set] link= message= field=id error=expected decimal or hexadecimal integer
+[Message::set] link= message= field=id error=expected decimal or hexadecimal integer
+[Message::set] link= message= field=invalid error=unknown field: invalid
+[Message::set] link= message= field=name error=string exceeds fixed byte length or contains NUL
+[Message::set] link= message= field=name error=string exceeds fixed byte length or contains NUL
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=non-finite number
+[Message::set] link= message= field=x error=non-finite number
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=signed integer overflow
+[Message::set] link= message= field=x error=non-finite number
+[Message::set] link= message= field=x error=non-finite number
+[Message::set] link= message= field=a.inner.x error=signed integer overflow
+[Message::set] link= message= field=a.inner error=struct fields mismatch: a.inner
+All tests passed
+cd build/test/output && ../tests ../../../test/data/json
+Passed 220 checks
+cd build/test/output && ../alignment_tests ../../../test/data/json
+Passed 137 alignment checks
+cd build/test/output && ../msgcode_tests ../../../test/data/v5/json
+Passed 58 msgcode checks
+cd build/test/output && ../interface_v6_tests ../../../test/data/v6/json
+Passed 56 v6 checks
+cd build/test/output && ../interface_v7_tests ../../../test/data/current/json
+Passed 47 v7 checks
+cd build/test/output && ../field_mapping_tests ../../../json
+Passed 49 inline and named mapping checks
+cd build/test/output && ../audit_integration_tests ../../../test/data/current/json
+UDP cases: 190, datagrams: 380
+Mutations: 677 accepted, 347 rejected
+Passed 2759 audit integration checks
+cd build/test/output && ../bitfield_tests ../../../json/bitfields
+[Message::set] link= message= field=a error=bit field overflow: a
+[Message::set] link= message= field=b error=bit field overflow: b
+[Message::set] link= message= field=a error=expected nonnegative integer
+[Message::set] link=bit_target message=message1 field=flags.val2 error=bit field overflow: flags.val2
+bitfield checks passed: 14052
+cd build/test/output && ../integer_format_tests ../../../json/integer_formats
+Passed 80 integer-format and fixed-value checks
+cd build/test/output && ../simple_structure_tests ../../../json/integer_formats
+Passed 10 simple-structure checks
+cd build/test/output && ../direct_alignment_tests
+Direct alignment regression: exact bytes, sizes, round trip, 28 truncations, padding normalization passed
+python3 -I test/audit_wire_oracle.py build/test/output/audit_output/oracle_cases.json
+Python struct oracle: 190 cases / 380 frames matched byte-for-byte
+make: Leaving directory '/workspace/scratch/0dcd2b8dc64a/source/unpacked/binary_message'

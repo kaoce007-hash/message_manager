@@ -1,0 +1,20 @@
+{
+    "body": {
+        "position": {
+            "y": "-0x32"
+        },
+        "status": "50",
+        "samples": [
+            "0x00",
+            "0xFF"
+        ],
+        "length": "0x2",
+        "buffer": [
+            "0xAB",
+            "205"
+        ],
+        "val1": "0x1F",
+        "val2": "2047",
+        "text": "50"
+    }
+}

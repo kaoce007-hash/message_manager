@@ -1,0 +1,11 @@
+{
+    "enums": {
+        "NumericState": {
+            "type": "uint16_t",
+            "values": {
+                "0x32": "FIFTY",
+                "100": "HUNDRED"
+            }
+        }
+    }
+}

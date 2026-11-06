@@ -1,0 +1,52 @@
+{
+    "mapping_file": "field_mapping.json",
+    "interfaces": [
+        {
+            "name": "numeric_conversion",
+            "source": {
+                "link": "numeric_source",
+                "message": "packet"
+            },
+            "target": {
+                "link": "numeric_target",
+                "message": "packet"
+            },
+            "fields": [
+                {
+                    "from": "body.position.y",
+                    "to": 3
+                },
+                {
+                    "from": "body.status",
+                    "to": "body.status",
+                    "mapping": "state_to_hundred"
+                },
+                {
+                    "from": "body.samples",
+                    "to": "body.samples"
+                },
+                {
+                    "from": "body.length",
+                    "to": "body.length"
+                },
+                {
+                    "from": "body.buffer",
+                    "to": "body.buffer"
+                },
+                {
+                    "from": "body.val1",
+                    "to": "body.val1"
+                },
+                {
+                    "from": "body.val2",
+                    "to": "body.val2"
+                },
+                {
+                    "from": "body.text",
+                    "to": "body.text"
+                }
+            ],
+            "constants": {}
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "enums": {
+        "DeviceState": {
+            "type": "uint8_t",
+            "values": {
+                "0": "IDLE",
+                "1": "RUNNING",
+                "2": "FAULT"
+            }
+        },
+        "OnOff": {
+            "type": "uint8_t",
+            "values": {
+                "0": "OFF",
+                "1": "ON"
+            }
+        },
+        "ResultCode": {
+            "type": "int16_t",
+            "values": {
+                "0": "정상",
+                "-1": "오류"
+            }
+        }
+    }
+}

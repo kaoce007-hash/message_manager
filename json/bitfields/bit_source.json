@@ -1,0 +1,49 @@
+{
+    "link": "bit_source",
+    "endian": "little",
+    "alignment": 1,
+    "dispatch": {
+        "field": "header.msgcode"
+    },
+    "types": {
+        "Header": {
+            "fields": [
+                {
+                    "name": "msgcode",
+                    "type": "uint8_t"
+                }
+            ]
+        },
+        "Flags": {
+            "fields": [
+                {
+                    "name": "val1",
+                    "type": "uint16_t",
+                    "bits": 5,
+                    "enum": "Val1"
+                },
+                {
+                    "name": "val2",
+                    "type": "uint16_t",
+                    "bits": 11,
+                    "enum": "Val2"
+                }
+            ]
+        }
+    },
+    "messages": {
+        "message1": {
+            "msgcode": 1,
+            "fields": [
+                {
+                    "name": "header",
+                    "type": "Header"
+                },
+                {
+                    "name": "flags",
+                    "type": "Flags"
+                }
+            ]
+        }
+    }
+}

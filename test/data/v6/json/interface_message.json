@@ -1,0 +1,112 @@
+{
+    "interfaces": [
+        {
+            "name": "link1_to_link2_message1",
+            "source": {
+                "link": "link_message1",
+                "message": "message1"
+            },
+            "target": {
+                "link": "link_message2",
+                "message": "message1"
+            },
+            "fields": [
+                {
+                    "from": "header.id",
+                    "to": "header.sequence"
+                },
+                {
+                    "from": "header.version",
+                    "to": "header.revision"
+                },
+                {
+                    "from": "header.state",
+                    "to": "header.state"
+                },
+                {
+                    "from": "body.position.x",
+                    "to": "body.coordinates.east"
+                },
+                {
+                    "from": "body.position.y",
+                    "to": "body.coordinates.north"
+                },
+                {
+                    "from": "body.temperature",
+                    "to": "body.celsius"
+                },
+                {
+                    "from": "body.name",
+                    "to": "body.label"
+                },
+                {
+                    "from": "body.samples",
+                    "to": "body.measurements"
+                },
+                {
+                    "from": "body.points",
+                    "to": "body.points"
+                },
+                {
+                    "from": "body.data",
+                    "to": "body.data"
+                }
+            ],
+            "constants": {}
+        },
+        {
+            "name": "link2_to_link1_message1",
+            "source": {
+                "link": "link_message2",
+                "message": "message1"
+            },
+            "target": {
+                "link": "link_message1",
+                "message": "message1"
+            },
+            "fields": [
+                {
+                    "from": "header.sequence",
+                    "to": "header.id"
+                },
+                {
+                    "from": "header.revision",
+                    "to": "header.version"
+                },
+                {
+                    "from": "header.state",
+                    "to": "header.state"
+                },
+                {
+                    "from": "body.coordinates.east",
+                    "to": "body.position.x"
+                },
+                {
+                    "from": "body.coordinates.north",
+                    "to": "body.position.y"
+                },
+                {
+                    "from": "body.celsius",
+                    "to": "body.temperature"
+                },
+                {
+                    "from": "body.label",
+                    "to": "body.name"
+                },
+                {
+                    "from": "body.measurements",
+                    "to": "body.samples"
+                },
+                {
+                    "from": "body.points",
+                    "to": "body.points"
+                },
+                {
+                    "from": "body.data",
+                    "to": "body.data"
+                }
+            ],
+            "constants": {}
+        }
+    ]
+}

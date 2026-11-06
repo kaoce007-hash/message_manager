@@ -1,0 +1,23 @@
+make: Entering directory '/workspace/scratch/1fb32f5b680b/v14/binary_message'
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -c src/BinaryMessage.cpp -o build/obj/BinaryMessage.o
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -c src/DumpTable.cpp -o build/obj/DumpTable.o
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -c src/MessageCommon.cpp -o build/obj/MessageCommon.o
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -c src/EnumDefinitions.cpp -o build/obj/EnumDefinitions.o
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -c src/MessageInterface.cpp -o build/obj/MessageInterface.o
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -c src/MessageManager.cpp -o build/obj/MessageManager.o
+rm -f lib/libbinary_message.a
+ar rcs lib/libbinary_message.a build/obj/BinaryMessage.o build/obj/DumpTable.o build/obj/EnumDefinitions.o build/obj/MessageCommon.o build/obj/MessageInterface.o build/obj/MessageManager.o
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/demo.d examples/main.cpp lib/libbinary_message.a   -o build/demo
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC examples/simple_main.cpp lib/libbinary_message.a   -o build/simple_demo
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/legacy_tests.d test/legacy_tests.cpp lib/libbinary_message.a   -o build/test/legacy_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/tests.d test/tests.cpp lib/libbinary_message.a   -o build/test/tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/alignment_tests.d test/alignment_tests.cpp lib/libbinary_message.a   -o build/test/alignment_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/msgcode_tests.d test/msgcode_tests.cpp lib/libbinary_message.a   -o build/test/msgcode_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/interface_v6_tests.d test/interface_v6_tests.cpp lib/libbinary_message.a   -o build/test/interface_v6_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/interface_v7_tests.d test/interface_v7_tests.cpp lib/libbinary_message.a   -o build/test/interface_v7_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/field_mapping_tests.d test/field_mapping_tests.cpp lib/libbinary_message.a   -o build/test/field_mapping_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/bitfield_tests.d test/bitfield_tests.cpp lib/libbinary_message.a   -o build/test/bitfield_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/integer_format_tests.d test/integer_format_tests.cpp lib/libbinary_message.a   -o build/test/integer_format_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/simple_structure_tests.d test/simple_structure_tests.cpp lib/libbinary_message.a   -o build/test/simple_structure_tests
+g++ -Iinclude -Ithird_party -O2 -Wall -Wextra -Wpedantic -std=c++17 -fPIC -MMD -MP -MF build/test/audit_integration_tests.d test/audit_integration_tests.cpp lib/libbinary_message.a   -o build/test/audit_integration_tests
+make: Leaving directory '/workspace/scratch/1fb32f5b680b/v14/binary_message'

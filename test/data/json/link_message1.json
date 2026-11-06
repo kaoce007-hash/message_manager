@@ -1,0 +1,102 @@
+{
+    "link": "link_message1",
+    "alignment": 4,
+    "endian": "big",
+    "types": {
+        "Header": {
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint32_t"
+                },
+                {
+                    "name": "version",
+                    "type": "uint16_t"
+                },
+                {
+                    "name": "state",
+                    "type": "uint8_t",
+                    "enum": "DeviceState"
+                },
+                {
+                    "name": "payload_length",
+                    "type": "uint16_t"
+                }
+            ]
+        },
+        "Position": {
+            "fields": [
+                {
+                    "name": "x",
+                    "type": "int16_t"
+                },
+                {
+                    "name": "y",
+                    "type": "int16_t"
+                }
+            ]
+        },
+        "Body": {
+            "fields": [
+                {
+                    "name": "position",
+                    "type": "Position"
+                },
+                {
+                    "name": "temperature",
+                    "type": "float"
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "length": 8
+                },
+                {
+                    "name": "samples",
+                    "type": "uint16_t",
+                    "count": 3
+                },
+                {
+                    "name": "points",
+                    "type": "Position",
+                    "count": 2
+                },
+                {
+                    "name": "payload",
+                    "type": "bytes",
+                    "length_from": "header.payload_length",
+                    "max_length": 1024
+                }
+            ]
+        },
+        "Status": {
+            "fields": [
+                {
+                    "name": "header",
+                    "type": "Header"
+                },
+                {
+                    "name": "body",
+                    "type": "Body"
+                }
+            ]
+        },
+        "Command": {
+            "fields": [
+                {
+                    "name": "sequence",
+                    "type": "uint32_t"
+                },
+                {
+                    "name": "enabled",
+                    "type": "uint8_t",
+                    "enum": "OnOff"
+                }
+            ]
+        }
+    },
+    "messages": {
+        "message1": "Status",
+        "message2": "Command"
+    }
+}

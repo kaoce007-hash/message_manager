@@ -1,0 +1,28 @@
+{
+    "mapping_file": "field_mapping.json",
+    "interfaces": [
+        {
+            "name": "bits_to_bits",
+            "source": {
+                "link": "bit_source",
+                "message": "message1"
+            },
+            "target": {
+                "link": "bit_target",
+                "message": "message1"
+            },
+            "fields": [
+                {
+                    "from": "flags.val1",
+                    "to": "flags.val1",
+                    "mapping": "val1_map"
+                },
+                {
+                    "from": "flags.val2",
+                    "to": "flags.val2",
+                    "mapping": "val2_map"
+                }
+            ]
+        }
+    ]
+}

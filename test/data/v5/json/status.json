@@ -1,0 +1,31 @@
+{
+  "message": "Status",
+  "endian": "big",
+  "types": {
+    "Header": {
+      "fields": [
+        { "name": "id", "type": "uint32_t" },
+        { "name": "version", "type": "uint16_t" }
+      ]
+    },
+    "Position": {
+      "fields": [
+        { "name": "x", "type": "int16_t" },
+        { "name": "y", "type": "int16_t" }
+      ]
+    },
+    "Body": {
+      "fields": [
+        { "name": "position", "type": "Position" },
+        { "name": "temperature", "type": "float" },
+        { "name": "name", "type": "string", "length": 8 }
+      ]
+    },
+    "Status": {
+      "fields": [
+        { "name": "header", "type": "Header" },
+        { "name": "body", "type": "Body" }
+      ]
+    }
+  }
+}

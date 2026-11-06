@@ -1,0 +1,129 @@
+{
+    "link": "link_message2",
+    "alignment": 1,
+    "endian": "little",
+    "dispatch": {
+        "field": "header.msgcode"
+    },
+    "types": {
+        "PacketHeader": {
+            "fields": [
+                {
+                    "name": "msgcode",
+                    "type": "uint16_t",
+                    "enum": "Link2MessageCode"
+                },
+                {
+                    "name": "sequence",
+                    "type": "uint32_t"
+                },
+                {
+                    "name": "revision",
+                    "type": "uint8_t"
+                },
+                {
+                    "name": "state",
+                    "type": "uint8_t",
+                    "enum": "DeviceState"
+                },
+                {
+                    "name": "payload_length",
+                    "type": "uint32_t"
+                }
+            ]
+        },
+        "Coordinates": {
+            "fields": [
+                {
+                    "name": "east",
+                    "type": "int32_t"
+                },
+                {
+                    "name": "north",
+                    "type": "int32_t"
+                }
+            ]
+        },
+        "Payload": {
+            "fields": [
+                {
+                    "name": "label",
+                    "type": "string",
+                    "length": 16
+                },
+                {
+                    "name": "coordinates",
+                    "type": "Coordinates"
+                },
+                {
+                    "name": "celsius",
+                    "type": "double"
+                },
+                {
+                    "name": "measurements",
+                    "type": "uint32_t",
+                    "count": 3
+                },
+                {
+                    "name": "tracks",
+                    "type": "Coordinates",
+                    "count": 2
+                },
+                {
+                    "name": "data",
+                    "type": "bytes",
+                    "length_from": "header.payload_length",
+                    "max_length": 2048
+                }
+            ]
+        },
+        "StatusPacket": {
+            "fields": [
+                {
+                    "name": "header",
+                    "type": "PacketHeader"
+                },
+                {
+                    "name": "payload",
+                    "type": "Payload"
+                }
+            ]
+        },
+        "Acknowledgement": {
+            "fields": [
+                {
+                    "name": "header",
+                    "type": "CodeHeader"
+                },
+                {
+                    "name": "sequence",
+                    "type": "uint32_t"
+                },
+                {
+                    "name": "result",
+                    "type": "int16_t",
+                    "enum": "ResultCode"
+                }
+            ]
+        },
+        "CodeHeader": {
+            "fields": [
+                {
+                    "name": "msgcode",
+                    "type": "uint16_t",
+                    "enum": "Link2MessageCode"
+                }
+            ]
+        }
+    },
+    "messages": {
+        "message1": {
+            "type": "StatusPacket",
+            "msgcode": 2001
+        },
+        "message2": {
+            "type": "Acknowledgement",
+            "msgcode": 2002
+        }
+    }
+}

@@ -1,0 +1,30 @@
+Link: link_message1  Message: message1
+Status: READY  Alignment: 4  Current size: 56 bytes
+OFFSET | FIELD                      | TYPE     | SIZE | ENDIAN | VALUE   | ENUM                     | HEX                    
+-------+----------------------------+----------+------+--------+---------+--------------------------+------------------------
+0      | header.msgcode             | uint16_t | 2    | big    | 1001    | Link1MessageCode::STATUS | 03 E9                  
+2      | <padding before header.id> | padding  | 2    | -      | 0       | -                        | 00 00                  
+4      | header.id                  | uint32_t | 4    | big    | 100     | -                        | 00 00 00 64            
+8      | header.version             | uint16_t | 2    | big    | 1       | -                        | 00 01                  
+10     | header.state               | uint8_t  | 1    | big    | 1       | DeviceState::RUNNING     | 01                     
+11     | <padding end header>       | padding  | 1    | -      | 0       | -                        | 00                     
+12     | body.position.x            | int16_t  | 2    | big    | -10     | -                        | FF F6                  
+14     | body.position.y            | int16_t  | 2    | big    | 20      | -                        | 00 14                  
+16     | body.temperature           | float    | 4    | big    | 25.5    | -                        | 41 CC 00 00            
+20     | body.name                  | string   | 8    | -      | "DEV1"  | -                        | 44 45 56 31 00 00 00 00
+28     | body.samples[0]            | uint16_t | 2    | big    | 10      | -                        | 00 0A                  
+30     | body.samples[1]            | uint16_t | 2    | big    | 20      | -                        | 00 14                  
+32     | body.samples[2]            | uint16_t | 2    | big    | 30      | -                        | 00 1E                  
+34     | body.points[0].x           | int16_t  | 2    | big    | -1      | -                        | FF FF                  
+36     | body.points[0].y           | int16_t  | 2    | big    | 2       | -                        | 00 02                  
+38     | body.points[1].x           | int16_t  | 2    | big    | 0       | -                        | 00 00                  
+40     | body.points[1].y           | int16_t  | 2    | big    | 3       | -                        | 00 03                  
+42     | <padding before body.data> | padding  | 2    | -      | 0       | -                        | 00 00                  
+44     | body.data.length           | uint32_t | 4    | big    | 5       | -                        | 00 00 00 05            
+48     | body.data.buffer           | char*    | 5    | -      | 5 bytes | -                        | 41 00 42 43 44         
+53     | <padding end body.data>    | padding  | 3    | -      | 0       | -                        | 00 00 00               
+HEX (56/56 bytes):
+00000000  03 E9 00 00 00 00 00 64 00 01 01 00 FF F6 00 14 
+00000010  41 CC 00 00 44 45 56 31 00 00 00 00 00 0A 00 14 
+00000020  00 1E FF FF 00 02 00 00 00 03 00 00 00 00 00 05 
+00000030  41 00 42 43 44 00 00 00 

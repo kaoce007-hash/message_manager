@@ -1,0 +1,45 @@
+x = -10
+MESSAGES: 2
+
+Link: link_message1  Message: message1
+Status: INCOMPLETE: missing value: body.temperature  Alignment: 4  Current size: 48 bytes
+OFFSET | FIELD                      | TYPE     | SIZE | ENDIAN | VALUE   | ENUM                     | HEX        
+-------+----------------------------+----------+------+--------+---------+--------------------------+------------
+0      | header.msgcode             | uint16_t | 2    | big    | 1001    | Link1MessageCode::STATUS | 03 E9      
+2      | <padding before header.id> | padding  | 2    | -      | 0       | -                        | 00 00      
+4      | header.id                  | uint32_t | 4    | big    | 100     | -                        | 00 00 00 64
+8      | header.version             | uint16_t | 2    | big    | 1       | -                        | 00 01      
+10     | header.state               | uint8_t  | 1    | big    | 1       | DeviceState::RUNNING     | 01         
+11     | <padding end header>       | padding  | 1    | -      | 0       | -                        | 00         
+12     | body.position.x            | int16_t  | 2    | big    | -10     | -                        | FF F6      
+14     | body.position.y            | int16_t  | 2    | big    | 20      | -                        | 00 14      
+16     | body.temperature           | float    | 4    | big    | <unset> | -                        | -          
+20     | body.name                  | string   | 8    | -      | <unset> | -                        | -          
+28     | body.samples[0]            | uint16_t | 2    | big    | <unset> | -                        | -          
+30     | body.samples[1]            | uint16_t | 2    | big    | <unset> | -                        | -          
+32     | body.samples[2]            | uint16_t | 2    | big    | <unset> | -                        | -          
+34     | body.points[0].x           | int16_t  | 2    | big    | <unset> | -                        | -          
+36     | body.points[0].y           | int16_t  | 2    | big    | <unset> | -                        | -          
+38     | body.points[1].x           | int16_t  | 2    | big    | <unset> | -                        | -          
+40     | body.points[1].y           | int16_t  | 2    | big    | <unset> | -                        | -          
+42     | <padding before body.data> | padding  | 2    | -      | 0       | -                        | 00 00      
+44     | body.data.length           | uint32_t | 4    | big    | <unset> | -                        | -          
+48     | body.data.buffer           | char*    | ?    | -      | <unset> | -                        | -          
+?      | <padding end body.data>    | padding  | ?    | -      | -       | -                        | -          
+?      | <padding end body>         | padding  | ?    | -      | -       | -                        | -          
+?      | <padding end message>      | padding  | ?    | -      | -       | -                        | -          
+
+Link: link_message1  Message: message2
+Status: INCOMPLETE: missing value: header.id  Alignment: 4  Current size: 20 bytes
+OFFSET | FIELD                      | TYPE     | SIZE | ENDIAN | VALUE   | ENUM                      | HEX     
+-------+----------------------------+----------+------+--------+---------+---------------------------+---------
+0      | header.msgcode             | uint16_t | 2    | big    | 1002    | Link1MessageCode::COMMAND | 03 EA   
+2      | <padding before header.id> | padding  | 2    | -      | 0       | -                         | 00 00   
+4      | header.id                  | uint32_t | 4    | big    | <unset> | -                         | -       
+8      | header.version             | uint16_t | 2    | big    | <unset> | -                         | -       
+10     | header.state               | uint8_t  | 1    | big    | <unset> | -                         | -       
+11     | <padding end header>       | padding  | 1    | -      | 0       | -                         | 00      
+12     | sequence                   | uint32_t | 4    | big    | <unset> | -                         | -       
+16     | enabled                    | uint8_t  | 1    | big    | <unset> | -                         | -       
+17     | <padding end message>      | padding  | 3    | -      | 0       | -                         | 00 00 00
+

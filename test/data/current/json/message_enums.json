@@ -1,0 +1,40 @@
+{
+    "enums": {
+        "DeviceState": {
+            "type": "uint8_t",
+            "values": {
+                "0": "IDLE",
+                "1": "RUNNING",
+                "2": "FAULT"
+            }
+        },
+        "OnOff": {
+            "type": "uint8_t",
+            "values": {
+                "0": "OFF",
+                "1": "ON"
+            }
+        },
+        "ResultCode": {
+            "type": "int16_t",
+            "values": {
+                "0": "정상",
+                "-1": "오류"
+            }
+        },
+        "Link1MessageCode": {
+            "type": "uint16_t",
+            "values": {
+                "1001": "STATUS",
+                "1002": "COMMAND"
+            }
+        },
+        "Link2MessageCode": {
+            "type": "uint16_t",
+            "values": {
+                "2001": "STATUS",
+                "2002": "ACK"
+            }
+        }
+    }
+}

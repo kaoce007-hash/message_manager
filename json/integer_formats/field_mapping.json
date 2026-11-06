@@ -1,0 +1,12 @@
+{
+    "mappings": {
+        "state_to_hundred": {
+            "values": [
+                {
+                    "from": "0x32",
+                    "to": "100"
+                }
+            ]
+        }
+    }
+}

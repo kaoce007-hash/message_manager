@@ -1,0 +1,87 @@
+{
+    "link": "numeric_source",
+    "endian": "big",
+    "alignment": "0x4",
+    "dispatch": {
+        "field": "header.msgcode"
+    },
+    "types": {
+        "Header": {
+            "fields": [
+                {
+                    "name": "msgcode",
+                    "type": "uint16_t"
+                }
+            ]
+        },
+        "Position": {
+            "fields": [
+                {
+                    "name": "y",
+                    "type": "int16_t"
+                }
+            ]
+        },
+        "Body": {
+            "fields": [
+                {
+                    "name": "position",
+                    "type": "Position"
+                },
+                {
+                    "name": "status",
+                    "type": "uint16_t",
+                    "enum": "NumericState"
+                },
+                {
+                    "name": "samples",
+                    "type": "uint8_t",
+                    "count": "0x2"
+                },
+                {
+                    "name": "length",
+                    "type": "uint8_t"
+                },
+                {
+                    "name": "buffer",
+                    "type": "char*",
+                    "length_from": "length",
+                    "max_length": "0x4"
+                },
+                {
+                    "name": "val1",
+                    "type": "uint16_t",
+                    "bits": "0x5"
+                },
+                {
+                    "name": "val2",
+                    "type": "uint16_t",
+                    "bits": "11"
+                },
+                {
+                    "name": "text",
+                    "type": "string",
+                    "length": "0x4"
+                }
+            ]
+        },
+        "Packet": {
+            "fields": [
+                {
+                    "name": "header",
+                    "type": "Header"
+                },
+                {
+                    "name": "body",
+                    "type": "Body"
+                }
+            ]
+        }
+    },
+    "messages": {
+        "packet": {
+            "type": "Packet",
+            "msgcode": "0x32"
+        }
+    }
+}

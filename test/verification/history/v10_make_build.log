@@ -1,0 +1,11 @@
+make: Entering directory '/workspace/scratch/d486e8ce2a69/work/binary_message'
+g++ -Iinclude -Ithird_party -O1 -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -MMD -MP -c src/BinaryMessage.cpp -o build/obj/BinaryMessage.o
+g++ -Iinclude -Ithird_party -O1 -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -MMD -MP -c src/DumpTable.cpp -o build/obj/DumpTable.o
+g++ -Iinclude -Ithird_party -O1 -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -MMD -MP -c src/EnumDefinitions.cpp -o build/obj/EnumDefinitions.o
+g++ -Iinclude -Ithird_party -O1 -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -MMD -MP -c src/MessageCommon.cpp -o build/obj/MessageCommon.o
+g++ -Iinclude -Ithird_party -O1 -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -MMD -MP -c src/MessageInterface.cpp -o build/obj/MessageInterface.o
+g++ -Iinclude -Ithird_party -O1 -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -MMD -MP -c src/MessageLink.cpp -o build/obj/MessageLink.o
+g++ -Iinclude -Ithird_party -O1 -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -MMD -MP -c src/MessageManager.cpp -o build/obj/MessageManager.o
+ar rcs lib/libbinary_message.a build/obj/BinaryMessage.o build/obj/DumpTable.o build/obj/EnumDefinitions.o build/obj/MessageCommon.o build/obj/MessageInterface.o build/obj/MessageLink.o build/obj/MessageManager.o
+g++ -Iinclude -Ithird_party -O1 -std=c++17 -fPIC -Wall -Wextra -Wpedantic -Werror -MMD -MP -MF build/demo.d examples/main.cpp lib/libbinary_message.a   -o build/demo
+make: Leaving directory '/workspace/scratch/d486e8ce2a69/work/binary_message'

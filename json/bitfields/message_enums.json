@@ -1,0 +1,20 @@
+{
+    "enums": {
+        "Val1": {
+            "type": "uint16_t",
+            "values": {
+                "1": "START",
+                "2": "STOP",
+                "3": "READY"
+            }
+        },
+        "Val2": {
+            "type": "uint16_t",
+            "values": {
+                "100": "NORMAL",
+                "200": "ALARM",
+                "300": "MAPPED"
+            }
+        }
+    }
+}

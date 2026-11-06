@@ -1,0 +1,20 @@
+{
+  "cpp_files": 25,
+  "line_comments": 5657,
+  "runtime_nested_call_findings": 0,
+  "default_argument_declarations": [
+    {
+      "file": "include/MessageManager.hpp",
+      "line": 37,
+      "expression": "MessageManager(const Json &definition,\n            const EnumDefinitions &enums = EnumDefinitions())"
+    },
+    {
+      "file": "include/BinaryMessage.hpp",
+      "line": 30,
+      "expression": "Message(const Json &schema,\n            const std::string &linkName = \"\",\n            const std::string &messageName = \"\",\n            const EnumDefinitions &enums = EnumDefinitions())"
+    }
+  ],
+  "return_with_call_findings": 0,
+  "message_value_dictionary_removed": true,
+  "json_unchanged_from_v14": true
+}

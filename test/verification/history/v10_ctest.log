@@ -1,0 +1,23 @@
+Test project /workspace/scratch/d486e8ce2a69/build_v10_cmake
+    Start 1: legacy_binary_tests
+1/9 Test #1: legacy_binary_tests ..............   Passed    0.00 sec
+    Start 2: message_tests
+2/9 Test #2: message_tests ....................   Passed    0.01 sec
+    Start 3: alignment_tests
+3/9 Test #3: alignment_tests ..................   Passed    0.00 sec
+    Start 4: msgcode_tests
+4/9 Test #4: msgcode_tests ....................   Passed    0.00 sec
+    Start 5: interface_v6_tests
+5/9 Test #5: interface_v6_tests ...............   Passed    0.01 sec
+    Start 6: interface_v7_tests
+6/9 Test #6: interface_v7_tests ...............   Passed    0.01 sec
+    Start 7: field_mapping_tests
+7/9 Test #7: field_mapping_tests ..............   Passed    0.01 sec
+    Start 8: audit_integration_tests
+8/9 Test #8: audit_integration_tests ..........   Passed    0.38 sec
+    Start 9: audit_wire_oracle
+9/9 Test #9: audit_wire_oracle ................   Passed    0.03 sec
+
+100% tests passed out of 9
+
+Total Test time (real) =   0.46 sec

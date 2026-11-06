@@ -1,0 +1,27 @@
+Link: link_message2  Message: message1
+Status: READY  Alignment: 1  Current size: 77 bytes
+OFFSET | FIELD                  | TYPE     | SIZE | ENDIAN | VALUE   | ENUM                     | HEX                                    
+-------+------------------------+----------+------+--------+---------+--------------------------+----------------------------------------
+0      | header.msgcode         | uint16_t | 2    | little | 2001    | Link2MessageCode::STATUS | D1 07                                  
+2      | header.sequence        | uint32_t | 4    | little | 1000    | -                        | E8 03 00 00                            
+6      | header.revision        | uint8_t  | 1    | little | 1       | -                        | 01                                     
+7      | header.state           | uint8_t  | 1    | little | 1       | DeviceState::RUNNING     | 01                                     
+8      | body.label             | string   | 16   | -      | "DEV1"  | -                        | 44 45 56 31 00 00 00 00 00 00 00 00 ...
+24     | body.coordinates.east  | int32_t  | 4    | little | -10     | -                        | F6 FF FF FF                            
+28     | body.coordinates.north | int32_t  | 4    | little | 20      | -                        | 14 00 00 00                            
+32     | body.celsius           | double   | 8    | little | 25.5    | -                        | 00 00 00 00 00 80 39 40                
+40     | body.measurements[0]   | uint32_t | 4    | little | 10      | -                        | 0A 00 00 00                            
+44     | body.measurements[1]   | uint32_t | 4    | little | 20      | -                        | 14 00 00 00                            
+48     | body.measurements[2]   | uint32_t | 4    | little | 30      | -                        | 1E 00 00 00                            
+52     | body.points[0].x       | int32_t  | 4    | little | -1      | -                        | FF FF FF FF                            
+56     | body.points[0].y       | int32_t  | 4    | little | 2       | -                        | 02 00 00 00                            
+60     | body.points[1].x       | int32_t  | 4    | little | 0       | -                        | 00 00 00 00                            
+64     | body.points[1].y       | int32_t  | 4    | little | 3       | -                        | 03 00 00 00                            
+68     | body.data.length       | uint32_t | 4    | little | 5       | -                        | 05 00 00 00                            
+72     | body.data.buffer       | char*    | 5    | -      | 5 bytes | -                        | 41 00 42 43 44                         
+HEX (77/77 bytes):
+00000000  D1 07 E8 03 00 00 01 01 44 45 56 31 00 00 00 00 
+00000010  00 00 00 00 00 00 00 00 F6 FF FF FF 14 00 00 00 
+00000020  00 00 00 00 00 80 39 40 0A 00 00 00 14 00 00 00 
+00000030  1E 00 00 00 FF FF FF FF 02 00 00 00 00 00 00 00 
+00000040  03 00 00 00 05 00 00 00 41 00 42 43 44 

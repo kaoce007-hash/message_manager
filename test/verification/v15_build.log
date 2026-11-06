@@ -1,0 +1,14 @@
+make: Entering directory '/workspace/scratch/1fb32f5b680b/v15/binary_message'
+make: Nothing to be done for 'all'.
+make: 'build/test/legacy_tests' is up to date.
+make: 'build/test/tests' is up to date.
+make: 'build/test/alignment_tests' is up to date.
+make: 'build/test/msgcode_tests' is up to date.
+make: 'build/test/interface_v6_tests' is up to date.
+make: 'build/test/interface_v7_tests' is up to date.
+make: 'build/test/field_mapping_tests' is up to date.
+make: 'build/test/bitfield_tests' is up to date.
+make: 'build/test/integer_format_tests' is up to date.
+make: 'build/test/simple_structure_tests' is up to date.
+make: 'build/test/audit_integration_tests' is up to date.
+make: Leaving directory '/workspace/scratch/1fb32f5b680b/v15/binary_message'

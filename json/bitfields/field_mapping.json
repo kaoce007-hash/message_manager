@@ -1,0 +1,22 @@
+{
+    "mappings": {
+        "val1_map": {
+            "values": [
+                {
+                    "from": 1,
+                    "to": 3
+                }
+            ],
+            "unmatched": "copy"
+        },
+        "val2_map": {
+            "values": [
+                {
+                    "from": 100,
+                    "to": 300
+                }
+            ],
+            "unmatched": "copy"
+        }
+    }
+}

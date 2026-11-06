@@ -1,0 +1,177 @@
+[
+  {
+    "file": "src/EnumDefinitions.cpp",
+    "before_lines": 221,
+    "after_lines": 132,
+    "same_compiler_tokens": true,
+    "sha256": "8393331e1933dbdd28ce8904835b2f4159ce6c98f63f6bd6bb7f7c7d0c01275c"
+  },
+  {
+    "file": "src/MessageInterface.cpp",
+    "before_lines": 1207,
+    "after_lines": 697,
+    "same_compiler_tokens": true,
+    "sha256": "bd39a5cccb16cd9f72ba22de1bbafff1c2d0d9860ff04e37a9083f24e86833da"
+  },
+  {
+    "file": "src/MessageManager.cpp",
+    "before_lines": 1012,
+    "after_lines": 596,
+    "same_compiler_tokens": true,
+    "sha256": "1123532f27db26b088f29025e93e599769667e26c25431a06c2999fd2ce92cdc"
+  },
+  {
+    "file": "src/DumpTable.cpp",
+    "before_lines": 299,
+    "after_lines": 180,
+    "same_compiler_tokens": true,
+    "sha256": "2cb8922a5084e0dd7114c9731f8f38604ffbe9b89298b08d88ef7ae1e207b243"
+  },
+  {
+    "file": "src/BinaryMessage.cpp",
+    "before_lines": 2717,
+    "after_lines": 1621,
+    "same_compiler_tokens": true,
+    "sha256": "7e754e7052413bd8ab50c720aab29d8ffe91de0915a7921f2a56b0194770d379"
+  },
+  {
+    "file": "src/MessageCommon.cpp",
+    "before_lines": 898,
+    "after_lines": 545,
+    "same_compiler_tokens": true,
+    "sha256": "ef87bb67e4d5e1925448b9730b6f05015b80c9bccd0eb27e4944e3e11e77ad0a"
+  },
+  {
+    "file": "include/MessageManager.hpp",
+    "before_lines": 118,
+    "after_lines": 118,
+    "same_compiler_tokens": true,
+    "sha256": "c6e3376789082fc7d6e59659115291a085fc322b07ea59c13be6a96c0a42553e"
+  },
+  {
+    "file": "include/EnumDefinitions.hpp",
+    "before_lines": 29,
+    "after_lines": 27,
+    "same_compiler_tokens": true,
+    "sha256": "e9baa82ba420932cc33255dac436ae3f44025df38bf7837b168fdb9d7730064f"
+  },
+  {
+    "file": "include/MessageInterface.hpp",
+    "before_lines": 140,
+    "after_lines": 135,
+    "same_compiler_tokens": true,
+    "sha256": "7ea134077ffa95aafd3b4e4aa5ab97137fd95dc9105630de45a89b07aa5fb1f3"
+  },
+  {
+    "file": "include/BinaryMessage.hpp",
+    "before_lines": 325,
+    "after_lines": 317,
+    "same_compiler_tokens": true,
+    "sha256": "454bb3192497027651a1733d47ce924fee7c96c4976132af4e44b5ea9525c427"
+  },
+  {
+    "file": "include/MessageCommon.hpp",
+    "before_lines": 244,
+    "after_lines": 217,
+    "same_compiler_tokens": true,
+    "sha256": "eb34c8f27b7350463342dfd49e49ea065eea1d579dcb7b4a80d169a3867358bd"
+  },
+  {
+    "file": "include/DumpTable.hpp",
+    "before_lines": 140,
+    "after_lines": 100,
+    "same_compiler_tokens": true,
+    "sha256": "460bbafce5bd4f9bf738a6edb57610e685fe9e7f56e7da8d0c0ec01c42c63804"
+  },
+  {
+    "file": "examples/main.cpp",
+    "before_lines": 175,
+    "after_lines": 111,
+    "same_compiler_tokens": true,
+    "sha256": "a5ee45338b42c10a674a08fe18efff4d3df053d3f077287d0b2be8a42df2c0a6"
+  },
+  {
+    "file": "examples/simple_main.cpp",
+    "before_lines": 57,
+    "after_lines": 44,
+    "same_compiler_tokens": true,
+    "sha256": "842fd92d23e9e06877cea836ae70548da9efaf5913fc02fa74e9af41b078e0c7"
+  },
+  {
+    "file": "test/tests.cpp",
+    "before_lines": 1579,
+    "after_lines": 979,
+    "same_compiler_tokens": true,
+    "sha256": "aab25d7c6d9991b33d33d0606c824c7368a31f300df19b1ceb9757064dc4cba4"
+  },
+  {
+    "file": "test/audit_integration_tests.cpp",
+    "before_lines": 977,
+    "after_lines": 618,
+    "same_compiler_tokens": true,
+    "sha256": "cd1958ae5d40259984ca5c8039d9e646e93b014b801d17d8f098a4b719b79a2f"
+  },
+  {
+    "file": "test/msgcode_tests.cpp",
+    "before_lines": 938,
+    "after_lines": 588,
+    "same_compiler_tokens": true,
+    "sha256": "3476233e33960d4afc6117c571ea6da48bde81e2d4099d71eb0e25dd59d1620b"
+  },
+  {
+    "file": "test/interface_v7_tests.cpp",
+    "before_lines": 643,
+    "after_lines": 378,
+    "same_compiler_tokens": true,
+    "sha256": "3032495c21c38e89154a0cfe9d91d31b38e7778ab3f09a0a838476bd2826d57c"
+  },
+  {
+    "file": "test/interface_v6_tests.cpp",
+    "before_lines": 840,
+    "after_lines": 512,
+    "same_compiler_tokens": true,
+    "sha256": "217a68b82ac945be6edfeadb0621940aa7b16cedaf1a8ccd5d13701af12947e6"
+  },
+  {
+    "file": "test/legacy_tests.cpp",
+    "before_lines": 767,
+    "after_lines": 495,
+    "same_compiler_tokens": true,
+    "sha256": "fbc99ff16d01af9220bffee544ea546e960101af758509c61afb4905a7757753"
+  },
+  {
+    "file": "test/bitfield_tests.cpp",
+    "before_lines": 645,
+    "after_lines": 377,
+    "same_compiler_tokens": true,
+    "sha256": "246cd99494bf6204236de4809071f101916ae4d8781c35fdda14d9885a00ec7a"
+  },
+  {
+    "file": "test/alignment_tests.cpp",
+    "before_lines": 559,
+    "after_lines": 339,
+    "same_compiler_tokens": true,
+    "sha256": "25246328e34d94e2e3b1a716d0f0e90cb3dfb02d857b663c29e630bf7245ec65"
+  },
+  {
+    "file": "test/simple_structure_tests.cpp",
+    "before_lines": 173,
+    "after_lines": 109,
+    "same_compiler_tokens": true,
+    "sha256": "5f7fa95a02613e0c2d662c48ed6c87b03c7f58e1cfbf0d42b1a243e59d74a123"
+  },
+  {
+    "file": "test/integer_format_tests.cpp",
+    "before_lines": 522,
+    "after_lines": 306,
+    "same_compiler_tokens": true,
+    "sha256": "0913f011945142a0af0ba27301d5d66d44917bc10b8b17fc70222da70923ebdc"
+  },
+  {
+    "file": "test/field_mapping_tests.cpp",
+    "before_lines": 768,
+    "after_lines": 449,
+    "same_compiler_tokens": true,
+    "sha256": "ca4587a9c84e9bed1a54be8e8bd1781ba0c761e6026354179059cb2692bf9f77"
+  }
+]

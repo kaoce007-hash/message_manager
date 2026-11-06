@@ -1,0 +1,12 @@
+0000000000007750 T wire::Message::deserialize(std::vector<unsigned char, std::allocator<unsigned char> > const&)
+0000000000008800 T wire::Message::serialize() const
+00000000000057c0 T wire::MessageInterface::convertInto(wire::Message const&, wire::Message&) const
+0000000000004c20 T wire::MessageInterface::convertInto(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, wire::Message const&, wire::Message&) const
+0000000000005b20 T wire::MessageInterface::convertBytes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&, wire::MessageCatalog const&) const
+00000000000059b0 T wire::MessageInterface::convert(wire::Message const&) const
+0000000000005ad0 T wire::MessageInterface::convert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, wire::Message const&) const
+0000000000005900 T wire::MessageInterface::convert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, wire::Message const&, wire::MessageCatalog const&) const
+00000000000017f0 T wire::MessageManager::receive(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, void const*, unsigned long)
+00000000000016b0 T wire::MessageManager::receive(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&)
+0000000000001630 T wire::MessageManager::receive(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<unsigned char, std::allocator<unsigned char> > const&)
+0000000000001770 T wire::MessageManager::receive(std::vector<unsigned char, std::allocator<unsigned char> > const&)

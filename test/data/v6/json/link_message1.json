@@ -1,0 +1,125 @@
+{
+    "link": "link_message1",
+    "alignment": 4,
+    "endian": "big",
+    "dispatch": {
+        "field": "header.msgcode"
+    },
+    "messages": {
+        "message1": {
+            "msgcode": 1001,
+            "header": {
+                "fields": [
+                    {
+                        "name": "msgcode",
+                        "type": "uint16_t",
+                        "enum": "Link1MessageCode"
+                    },
+                    {
+                        "name": "id",
+                        "type": "uint32_t"
+                    },
+                    {
+                        "name": "version",
+                        "type": "uint16_t"
+                    },
+                    {
+                        "name": "state",
+                        "type": "uint8_t",
+                        "enum": "DeviceState"
+                    }
+                ]
+            },
+            "fields": [
+                {
+                    "name": "body",
+                    "type": "struct",
+                    "fields": [
+                        {
+                            "name": "position",
+                            "type": "struct",
+                            "fields": [
+                                {
+                                    "name": "x",
+                                    "type": "int16_t"
+                                },
+                                {
+                                    "name": "y",
+                                    "type": "int16_t"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "temperature",
+                            "type": "float"
+                        },
+                        {
+                            "name": "name",
+                            "type": "string",
+                            "length": 8
+                        },
+                        {
+                            "name": "samples",
+                            "type": "uint16_t",
+                            "count": 3
+                        },
+                        {
+                            "name": "points",
+                            "type": "struct",
+                            "fields": [
+                                {
+                                    "name": "x",
+                                    "type": "int16_t"
+                                },
+                                {
+                                    "name": "y",
+                                    "type": "int16_t"
+                                }
+                            ],
+                            "count": 2
+                        },
+                        {
+                            "name": "data",
+                            "type": "struct",
+                            "fields": [
+                                {
+                                    "name": "length",
+                                    "type": "uint32_t"
+                                },
+                                {
+                                    "name": "buffer",
+                                    "type": "char*",
+                                    "length_from": "length",
+                                    "max_length": 1024
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "message2": {
+            "msgcode": 1002,
+            "header": {
+                "fields": [
+                    {
+                        "name": "msgcode",
+                        "type": "uint16_t",
+                        "enum": "Link1MessageCode"
+                    }
+                ]
+            },
+            "fields": [
+                {
+                    "name": "sequence",
+                    "type": "uint32_t"
+                },
+                {
+                    "name": "enabled",
+                    "type": "uint8_t",
+                    "enum": "OnOff"
+                }
+            ]
+        }
+    }
+}
